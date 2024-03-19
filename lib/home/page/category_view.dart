@@ -11,7 +11,7 @@ class CategoryView extends StatelessWidget {
   Widget build(BuildContext context) {
     ApiManager.fetchDataSources(categoryModel.id);
     return CustomBackgroundWidget(
-
+child: Container(),
     );
   }
 }
