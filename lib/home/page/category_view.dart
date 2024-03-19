@@ -17,7 +17,7 @@ class CategoryView extends StatelessWidget {
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return Center(
-              child: Text("same thing went wrong"),
+              child: Text('Same thing went wrong'),
             );
           }
           if (snapshot.connectionState == ConnectionState.waiting) {
@@ -27,13 +27,11 @@ class CategoryView extends StatelessWidget {
           }
 
           var sourcesList = snapshot.data ?? [];
-
           return ListView.builder(
             itemBuilder: (context, index) => Text(
               sourcesList[index].name,
-              style: Constants.theme.textTheme.bodyLarge?.copyWith(
-                color: Colors.black,
-              ),
+              style: Constants.theme.textTheme.bodyLarge
+                  ?.copyWith(color: Colors.black),
             ),
             itemCount: sourcesList.length,
           );
